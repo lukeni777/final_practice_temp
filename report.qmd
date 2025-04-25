@@ -1,12 +1,24 @@
 ---
+project:
+  output-dir: docs
+
+manuscript:
+  article: report.qmd
+
 title: "Tutorial 6: Refactoring R Code"
+
 format: 
   html:
+    comments:
+      hypothesis: true
     toc: true
     toc-title: "Table of Contents"
     number-sections: true
     fig-cap-location: top
     code-fold: false
+  docx: default
+
+
 execute:
   echo: false
   warning: false

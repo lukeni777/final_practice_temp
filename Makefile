@@ -1,5 +1,5 @@
 # Run everything
-all: report.html
+all: docs/report.html
 
 # Step 1: Run the script to load & clean the data
 data/clean/penguins_clean.csv: src/01_load_data.R
@@ -28,13 +28,18 @@ results/confusion_matrix.csv: src/04_results.R output/penguin_model.rds data/cle
 		--output_cm="results/confusion_matrix.csv"
 
 
-report.html: report.qmd data/clean/penguins_ready.csv results/bill_length_boxplot.png output/penguin_model.rds results/confusion_matrix.csv
-	quarto render report.qmd --output report.html
+
+docs/report.html: report.qmd data/clean/penguins_ready.csv results/bill_length_boxplot.png output/penguin_model.rds results/confusion_matrix.csv
+	mkdir -p docs
+	quarto render
 
 
 
 # Optional: Clean up all outputs
 clean:
-	rm -rf data/clean/*.csv report.html
+	rm -rf data 
 	rm -rf results
 	rm -rf output
+	rm -rf docs
+	rm -rf report.html
+	rm -rf report.docx
