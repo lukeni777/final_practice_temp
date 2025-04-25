@@ -28,6 +28,7 @@ jobs:
             install.packages("gt")
             install.packages("rmarkdown")
             install.packages("tidyverse")
+            install.packages("palmerpenguins")
         shell: Rscript {0}
 
       - name: Render and Publish
