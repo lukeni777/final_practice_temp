@@ -29,6 +29,13 @@ jobs:
             install.packages("rmarkdown")
             install.packages("tidyverse")
             install.packages("palmerpenguins")
+            install.packages("docopt")
+            install.packages("tidymodels")
+            install.packages("tibble")
+            install.packages("dplyr")
+            install.packages("yardstick")
+            install.packages("workflows")
+            install.packages("rsample")
         shell: Rscript {0}
 
       - name: Render and Publish
