@@ -27,6 +27,7 @@ jobs:
             install.packages("readr")
             install.packages("gt")
             install.packages("rmarkdown")
+            install.packages("tidyverse")
         shell: Rscript {0}
 
       - name: Render and Publish
