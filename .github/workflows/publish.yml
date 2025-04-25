@@ -36,6 +36,7 @@ jobs:
             install.packages("yardstick")
             install.packages("workflows")
             install.packages("rsample")
+            install.packages("kknn")
         shell: Rscript {0}
 
       - name: Render and Publish
