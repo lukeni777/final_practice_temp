@@ -1,5 +1,5 @@
 # src/03_model.R
-
+library(asfactorpkg)
 library(tidyverse)
 library(tidymodels)
 library(docopt)
@@ -15,7 +15,9 @@ opt <- docopt(doc)
 # Load the data
 data <- read_csv(opt$input)
 
-data <- data %>% mutate(species = as.factor(species))
+
+data <- as_factor_column(data, "species")
+
 
 # Split the data
 set.seed(123)

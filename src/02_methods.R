@@ -1,5 +1,7 @@
 # src/02_methods.R
-
+library(devtools)
+devtools::install_github("lukeni777/asfactorpkg")
+library(asfactorpkg)
 library(tidyverse)
 library(readr)
 library(docopt)
@@ -26,10 +28,10 @@ plot <- ggplot(data, aes(x = species, y = bill_length_mm, fill = species)) +
 
 ggsave(opt$fig1, plot, width = 6, height = 4)
 
+data <- as_factor_column(data, "species")
 # Feature engineering
 data <- data %>%
-  select(species, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g) %>%
-  mutate(species = as.factor(species))
+  select(species, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g)
 
 # Save output
 write_csv(data, opt$output)

@@ -40,7 +40,6 @@ vignettes/*.pdf
 .Renviron
 
 
-
 # translation temp files
 po/*~
 
