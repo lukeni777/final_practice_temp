@@ -1,0 +1,10 @@
+Prediction,Truth,Freq
+Adelie,Adelie,36
+Chinstrap,Adelie,1
+Gentoo,Adelie,0
+Adelie,Chinstrap,0
+Chinstrap,Chinstrap,17
+Gentoo,Chinstrap,0
+Adelie,Gentoo,0
+Chinstrap,Gentoo,0
+Gentoo,Gentoo,30
