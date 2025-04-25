@@ -37,6 +37,7 @@ jobs:
             install.packages("workflows")
             install.packages("rsample")
             install.packages("kknn")
+            install.packages("devtools")
         shell: Rscript {0}
 
       - name: Render and Publish
